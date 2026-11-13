@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saroj Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">📚 Saroj Library</div><div class="tag">Knowledge For Everyone</div>
+<nav><a href="#qa">Questions & Answers</a><a href="#pdfs">PDF Library</a><button id="loginBtn">Admin Login</button><button id="logoutBtn" hidden>Logout</button></nav></header>
+<main>
+<section class="hero"><h1>Learn. Explore. Grow.</h1><p>Questions, answers, notes and study PDFs — all in one place.</p>
+<input id="search" placeholder="Search questions, answers or PDFs…"></section>
+<section id="adminPanel" class="panel" hidden><h2>Admin dashboard</h2>
+<form id="qaForm"><h3>Add Question & Answer</h3><input id="question" required placeholder="Question"><textarea id="answer" required placeholder="Answer"></textarea><button>Add Q&A</button></form>
+<form id="pdfForm"><h3>Upload PDF</h3><input id="pdfTitle" required placeholder="PDF title"><input id="pdfSubject" placeholder="Subject / category"><input id="pdfFile" type="file" accept="application/pdf" required><button>Upload PDF</button></form>
+<p class="hint">Only the configured admin account can add or delete content.</p></section>
+<section id="qa"><h2>Questions & Answers</h2><div id="qaList" class="cards"></div></section>
+<section id="pdfs"><h2>PDF Library</h2><div id="pdfList" class="cards"></div></section>
+</main><footer>© <span id="year"></span> Saroj Library</footer>
+<div id="status" role="status"></div>
+<script type="module" src="app.js"></script>
+</body></html>
